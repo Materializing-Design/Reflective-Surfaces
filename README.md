@@ -20,8 +20,17 @@ Please see the [docs](./docs/) folder.
 3. Run `yarn install`.
 4. Run `yarn start`. This should open a new browser tab with the project. 
 
+To make a production build, run `yarn build` - the output lands in the `build/` folder. 
+You can then run `yarn preview` to serve that build locally and check it before deploying.
+
 ## Dependencies 
 1. React `18.2.0`
-2. Node `20.10.0`
-3. Yarn `1.22.19`
-4. [Package.JSON](./package.json)
+2. Vite `6` (the build tool - see [vite.config.js](./vite.config.js))
+3. Node `20.10.0` or newer
+4. Yarn `1.22.19`
+5. [Package.JSON](./package.json)
+
+> :information_source: This project used to be built with Create React App. CRA was retired upstream, so
+> it now builds with [Vite](https://vite.dev). The commands above are unchanged. The one thing to know if
+> you are adding files: **components live in `.jsx` files, not `.js`** - Vite only looks for JSX syntax in
+> `.jsx`. Your `import` statements do not need the extension, so they look exactly the same as before.

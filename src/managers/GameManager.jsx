@@ -7,7 +7,7 @@ import delay from "../components/delay";
 
 
 // All screens are unlocked if in development mode. 
-const DEV = process.env.NODE_ENV == "development";
+const DEV = import.meta.env.DEV;
 const LOCAL_STORAGE_KEYS = {
   SCREEN_INDEX: "active_screen",
   SAVESTATE: "RS_PLAYABLE_SAVEFILE",
